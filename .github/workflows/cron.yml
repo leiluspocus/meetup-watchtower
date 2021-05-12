@@ -1,0 +1,12 @@
+name: refresh-stats
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+jobs:
+  cron:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Refresh members count
+        run: |
+          curl --request GET \
+          --url 'https://meetup-watchtower.netlify.app/.netlify/functions/members_count'
