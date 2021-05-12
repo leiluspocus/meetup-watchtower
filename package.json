@@ -1,0 +1,21 @@
+{
+  "name": "meetup-watchtower",
+  "version": "1.0.0",
+  "description": "A dashboard to visualize meetups stats",
+  "main": "api/index.ts",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leiluspocus/meetup-watchtower.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leiluspocus/meetup-watchtower/issues"
+  },
+  "homepage": "https://github.com/leiluspocus/meetup-watchtower#readme"
+}
