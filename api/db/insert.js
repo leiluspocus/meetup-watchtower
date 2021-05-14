@@ -29,6 +29,7 @@ async function connectToDatabase(uri) {
 // The main, exported, function of the endpoint,
 // dealing with the request and subsequent response
 module.exports = async (collection_name, data) => {
+	console.log(process.env.DB_URI);
 	const db = await connectToDatabase(process.env.DB_URI);
 
 	// Select the "quotes" collection from the database
