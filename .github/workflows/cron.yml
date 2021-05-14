@@ -1,7 +1,7 @@
 name: refresh-stats
 on:
   schedule:
-    - cron: '*/15 * * * *'
+    - cron: '*/45 * * * *'
 jobs:
   cron:
     runs-on: ubuntu-latest
