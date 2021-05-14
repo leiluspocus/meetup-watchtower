@@ -29,10 +29,7 @@ async function connectToDatabase(uri) {
 // The main, exported, function of the endpoint,
 // dealing with the request and subsequent response
 module.exports = async (collection_name, data) => {
-	console.log(process.env);
-	console.log('----');
-	console.log(process.env.APP_WATCHTOWER_DB_URI);
-	/*const db = await connectToDatabase(process.env.DB_URI);
+	const db = await connectToDatabase(process.env.DB_URI);
 
 	// Select the "quotes" collection from the database
 	const collection = await db.collection(collection_name);
@@ -40,5 +37,5 @@ module.exports = async (collection_name, data) => {
 	  if (err) throw err;
 	  console.log("1 document inserted");
 	  console.log(res);
-	});*/
+	});
 };
