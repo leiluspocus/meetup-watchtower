@@ -4,7 +4,9 @@
   "description": "A dashboard to visualize meetups stats",
   "main": "api/index.ts",
   "dependencies": {
-    "axios": "^0.21.1"
+    "axios": "^0.21.1",
+    "mongodb": "^3.6.6",
+    "mongodb-client-encryption": "^1.2.3"
   },
   "devDependencies": {},
   "scripts": {
