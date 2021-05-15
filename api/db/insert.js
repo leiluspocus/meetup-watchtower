@@ -34,7 +34,10 @@ module.exports = async (collection_name, data) => {
 	// Select the "quotes" collection from the database
 	const collection = await db.collection(collection_name);
 	await collection.insertOne(data, function(err, res) {
-	  if (err) throw err;
+	  if (err) {
+		  console.error(err)
+		  throw err;
+	  }
 	  console.log("1 document inserted");
 	  console.log(res);
 	});
