@@ -9,6 +9,7 @@ const handler: Handler = async (event, context) => {
     console.log(response.data.members);
     count = response.data.members;
   });
+  console.log('inserting data');
   insert('members_count_history', { members: count, month: Date.now() });
   return {
     statusCode: 200,

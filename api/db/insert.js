@@ -23,14 +23,16 @@ async function connectToDatabase(uri) {
 
 	// Cache the database connection and return the connection
 	cachedDb = db;
+	console.log('Returning connection to database');
 	return db;
 }
 
 // The main, exported, function of the endpoint,
 // dealing with the request and subsequent response
 module.exports = async (collection_name, data) => {
+	console.log('Connecting to database');
 	const db = await connectToDatabase(process.env.APP_WATCHTOWER_DB_URI);
-
+	console.log('selecting collection');
 	// Select the "quotes" collection from the database
 	const collection = await db.collection(collection_name);
 	await collection.insertOne(data, function(err, res) {
