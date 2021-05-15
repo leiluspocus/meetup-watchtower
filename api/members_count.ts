@@ -9,7 +9,7 @@ const handler: Handler = async (event, context) => {
     console.log(response.data.members);
     count = response.data.members;
   });
-  insert('members_count_history', { name: "Company Inc", address: "Highway 37" });
+  insert('members_count_history', { members: count, month: Date.now() });
   return {
     statusCode: 200,
     body: JSON.stringify({ message: 'Stored members count ' + count}),
