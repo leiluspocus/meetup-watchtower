@@ -17,7 +17,12 @@ async function connectToDatabase(uri) {
 	}
 
 	// If no connection is cached, create a new one
-	const client = await MongoClient.connect(uri, { useNewUrlParser: true , useUnifiedTopology: true});
+	try {
+		const client = await MongoClient.connect(uri, { useNewUrlParser: true , useUnifiedTopology: true});
+	}
+	catch(err) {
+		console.error(err);
+	}
 
 	console.log(client);
 	// Select the database through the connection,
